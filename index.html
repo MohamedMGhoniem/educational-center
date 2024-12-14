@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <link rel="shortcut icon" href="images/site-icon.png" type="image/x-icon" />
+    <script defer src="data.js"></script>
+    <script defer src="script.js"></script>
+    <title>NextGen Learning: Shape Your Tomorrow</title>
+  </head>
+  <body>
+    <section class="hero-section" id="hero-section">
+      <div class="video-container video--hidden"></div>
+      <nav class="navigator">
+        <img src="images/logo.png" alt="logo" class="logo" />
+        <button class="btn btn__open-list">
+          <svg
+            class="nav-list__icon open__list-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none" />
+            <line
+              x1="40"
+              y1="128"
+              x2="216"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="40"
+              y1="64"
+              x2="216"
+              y2="64"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="40"
+              y1="192"
+              x2="216"
+              y2="192"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+          </svg>
+          <svg
+            class="nav-list__icon close__list-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none" />
+            <line
+              x1="160"
+              y1="96"
+              x2="96"
+              y2="160"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="96"
+              y1="96"
+              x2="160"
+              y2="160"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <circle
+              cx="128"
+              cy="128"
+              r="96"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+          </svg>
+        </button>
+        <ul class="nav__links">
+          <li class="link--item">
+            <a href="#section-categories" class="link">Courses</a>
+          </li>
+          <li class="link--item">
+            <a href="#section-teachers" class="link">Teachers</a>
+          </li>
+          <li class="link--item">
+            <a href="#section-location" class="link">Branches</a>
+          </li>
+          <li class="link--item">
+            <a href="#section-testimonials" class="link">testimonials</a>
+          </li>
+          <li class="link--item">
+            <a href="team.html" class="link link__page">Developers</a>
+          </li>
+          <li class="link--item">
+            <a href="#question-section" class="btn btn__ask">Ask us</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="container flex--column">
+        <h1 class="heading-primary">
+          Unlock Your Potential & Accelerate <br />
+          Your Learning Journey
+        </h1>
+        <span class="sub-heading"
+          >Enhance your skills with expert-led courses and personalized learning
+          paths designed to help you succeed</span
+        >
+        <div class="control-btns">
+          <a href="#question-section" class="btn btn__get-started"
+            >Get Started</a
+          >
+          <a href=""></a>
+          <button class="btn btn__video">Watch video</button>
+        </div>
+        <div class="faces-container">
+          <p><span>23,000+</span> graduates</p>
+          <div class="faces">
+            <img
+              src="images/faces/face-1.jpg"
+              alt="graduate image"
+              class="face-img"
+            />
+            <img
+              src="images/faces/face-2.jpg"
+              alt="graduate image"
+              class="face-img"
+            />
+            <img
+              src="images/faces/face-3.jpg"
+              alt="graduate image"
+              class="face-img"
+            />
+            <img
+              src="images/faces/face-4.jpg"
+              alt="graduate image"
+              class="face-img"
+            />
+            <img
+              src="images/faces/face-5.jpg"
+              alt="graduate image"
+              class="face-img"
+            />
+            <img
+              src="images/faces/face-6.jpg"
+              alt="graduate image"
+              class="face-img"
+            />
+            <img
+              src="images/faces/face-7.jpg"
+              alt="graduate image"
+              class="face-img"
+            />
+          </div>
+        </div>
+        <div class="student-poses">
+          <div class="column-1 column hidden">
+            <figure class="student__pose first-student">
+              <img
+                class="pose-img"
+                src="images/student-1.png"
+                alt="student posing"
+              />
+            </figure>
+          </div>
+          <div class="column-2 column hidden">
+            <figure class="student__pose second-student">
+              <img
+                class="pose-img"
+                src="images/student-2.png"
+                alt="student posing"
+              />
+            </figure>
+          </div>
+          <div class="column-3 column hidden">
+            <figure class="student__pose third-student">
+              <img
+                class="pose-img"
+                src="images/student-3.png"
+                alt="student posing"
+              />
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="shapes-container">
+        <span class="shape shape__rocket">
+          <img src="images/shapes/rocket.png" alt="shape for decoration" />
+        </span>
+        <span class="shape shape__airballoon">
+          <img src="images/shapes/airballon.png" alt="shape for decoration" />
+        </span>
+        <span class="shape shape__book">
+          <img src="images/shapes/book.png" alt="shape for decoration" />
+        </span>
+        <span class="shape shape__triangle">
+          <img src="images/shapes/triangle.png" alt="shape for decoration" />
+        </span>
+        <span class="shape shape__chemistry">
+          <img src="images/shapes/chemistry.png" alt="shape for decoration" />
+        </span>
+      </div>
+    </section>
+
+    <section class="section-categories" id="section-categories">
+      <div class="subject-container hidden">
+        <div class="subject-wrapper" data-subject="">
+          <h2 class="heading-secondary subject-heading">subject title</h2>
+          <p class="paragraph subject-summary">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            minima quia omnis accusantium, eveniet rerum doloremque ratione
+            soluta voluptatibus nulla rem explicabo! Ipsam earum obcaecati qui
+            accusamus! Delectus, dolor. Debitis.
+          </p>
+          <div class="download-container">
+            <span class="subject-author">👨‍🏫 mr: john smith</span>
+            <a
+              href="https://theswissbay.ch/pdf/Books/Linguistics/Mega%20linguistics%20pack/Indo-European/Italic/French%2C%20Teach%20Yourself%20(Adams%20%26%20Wilson).pdf"
+              download="french.pdf"
+              target="_blank"
+              class="btn btn__download"
+              >Download</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="categories__wrapper">
+          <div class="categories-title section-column">
+            <h2 class="heading-secondary">
+              Explore <br />
+              Our Categories
+            </h2>
+            <p class="paragraph">
+              Discover a world of learning tailored to your needs! Our diverse
+              range of subjects covers everything from foundational skills to
+              advanced topics, ensuring every learner finds their perfect match.
+              Explore our categories and take the first step toward achieving
+              your goals today
+            </p>
+          </div>
+          <ul class="categories-list list section-column">
+            <li class="category-item" data-item-num="cat-1">
+              <div class="item-icon color-1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none" />
+                  <line
+                    x1="88"
+                    y1="32"
+                    x2="168"
+                    y2="32"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <path
+                    d="M152,32V99.14l62.85,104.74A8,8,0,0,1,208,216H48a8,8,0,0,1-6.86-12.12L104,99.14V32"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <path
+                    d="M71.63,153.08c13.23-2.48,32-1.41,56.37,10.92,32.25,16.33,54.75,12.91,67.5,7.65"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                </svg>
+              </div>
+              <button class="btn item-btn">Chemistry</button>
+            </li>
+            <li class="category-item" data-item-num="cat-2">
+              <div class="item-icon color-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none" />
+                  <line
+                    x1="40"
+                    y1="72"
+                    x2="104"
+                    y2="72"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <line
+                    x1="72"
+                    y1="152"
+                    x2="72"
+                    y2="216"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <line
+                    x1="40"
+                    y1="184"
+                    x2="104"
+                    y2="184"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <line
+                    x1="152"
+                    y1="168"
+                    x2="216"
+                    y2="168"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <line
+                    x1="152"
+                    y1="200"
+                    x2="216"
+                    y2="200"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <line
+                    x1="160"
+                    y1="48"
+                    x2="208"
+                    y2="96"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <line
+                    x1="208"
+                    y1="48"
+                    x2="160"
+                    y2="96"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                </svg>
+              </div>
+              <button class="btn item-btn">Mathematics</button>
+            </li>
+            <li class="category-item" data-item-num="cat-3">
+              <div class="item-icon color-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none" />
+                  <ellipse
+                    cx="128"
+                    cy="128"
+                    rx="44.13"
+                    ry="116.33"
+                    transform="translate(-53.02 128) rotate(-45)"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <ellipse
+                    cx="128"
+                    cy="128"
+                    rx="116.33"
+                    ry="44.13"
+                    transform="translate(-53.02 128) rotate(-45)"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <circle cx="128" cy="128" r="10" />
+                </svg>
+              </div>
+              <button class="btn item-btn">Physics</button>
+            </li>
+            <li class="category-item" data-item-num="cat-4">
+              <div class="item-icon color-1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none" />
+                  <polyline
+                    points="240 216 184 104 128 216"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <line
+                    x1="144"
+                    y1="184"
+                    x2="224"
+                    y2="184"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <line
+                    x1="96"
+                    y1="32"
+                    x2="96"
+                    y2="56"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <line
+                    x1="32"
+                    y1="56"
+                    x2="160"
+                    y2="56"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <path
+                    d="M128,56a96,96,0,0,1-96,96"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <path
+                    d="M69.46,88A96,96,0,0,0,160,152"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                </svg>
+              </div>
+              <button class="btn item-btn">Languages</button>
+            </li>
+            <li class="category-item" data-item-num="cat-5">
+              <div class="item-icon color-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none" />
+                  <path
+                    d="M200,176V64a24,24,0,0,0-24-24H40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <line
+                    x1="104"
+                    y1="104"
+                    x2="168"
+                    y2="104"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <line
+                    x1="104"
+                    y1="136"
+                    x2="168"
+                    y2="136"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <path
+                    d="M24,80s-8-6-8-16a24,24,0,0,1,48,0V192a24,24,0,0,0,48,0c0-10-8-16-8-16H216s8,6,8,16a24,24,0,0,1-24,24H88"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                </svg>
+              </div>
+              <button class="btn item-btn">History</button>
+            </li>
+            <li class="category-item" data-item-num="cat-6">
+              <div class="item-icon color-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none" />
+                  <line
+                    x1="32"
+                    y1="216"
+                    x2="224"
+                    y2="216"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <line
+                    x1="72"
+                    y1="176"
+                    x2="136"
+                    y2="176"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <rect
+                    x="72"
+                    y="24"
+                    width="64"
+                    height="120"
+                    rx="8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <path
+                    d="M136,72a80,80,0,0,1,48,144"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                </svg>
+              </div>
+              <button class="btn item-btn">Biology</button>
+            </li>
+            <li class="category-item" data-item-num="cat-7">
+              <div class="item-icon color-1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none" />
+                  <circle
+                    cx="164"
+                    cy="52"
+                    r="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <path
+                    d="M8,200,81.1,75.94a8,8,0,0,1,13.8,0L168,200Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <line
+                    x1="50.35"
+                    y1="128"
+                    x2="125.65"
+                    y2="128"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <path
+                    d="M146.61,163.71l33.06-55.79a8,8,0,0,1,13.76,0L248,200H168"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                </svg>
+              </div>
+              <button class="btn item-btn">Geology</button>
+            </li>
+
+            <li class="category-item" data-item-num="cat-8">
+              <div class="item-icon color-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none" />
+                  <polyline
+                    points="176 32 176 128 143.99 104 112 128 112 32"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <path
+                    d="M48,216a24,24,0,0,1,24-24H208V32H72A24,24,0,0,0,48,56Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                  <polyline
+                    points="48 216 48 224 192 224"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                  />
+                </svg>
+              </div>
+              <button class="btn item-btn">Philosophy</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-about" id="section-about">
+      <div class="container">
+        <div class="about-wrapper">
+          <div class="about-img section-column">
+            <img src="images/study-figure.png" alt="student journy" />
+          </div>
+          <div class="about-content section-column">
+            <span class="section-sub__heading">About Us</span>
+            <h2 class="heading-secondary">
+              We Are Maximizing <br />
+              Your Learning Growth
+            </h2>
+            <p class="paragraph">
+              At our center, we are dedicated to unlocking your full potential
+              through innovative teaching methods, personalized support, and a
+              nurturing environment. Whether it's mastering the basics or
+              excelling in advanced subjects, we provide the tools, resources,
+              and guidance needed to accelerate your learning journey. Let us
+              help you achieve your academic goals and beyond!
+            </p>
+
+            <ul class="list features-list">
+              <li class="feature-item">
+                <span>🔰</span>
+                <h4 class="heading-fourth">Safe and Supportive Environment</h4>
+              </li>
+              <li class="feature-item">
+                <span>👨‍👩‍👦</span>
+                <h4 class="heading-fourth">Parental Updates</h4>
+              </li>
+              <li class="feature-item">
+                <span>📊</span>
+                <h3 class="heading-fourth">Interactive Teaching Methods</h3>
+              </li>
+              <li class="feature-item">
+                <span>📆</span>
+                <h4 class="heading-fourth">Flexible Scheduling</h4>
+              </li>
+              <li class="feature-item">
+                <span>👨‍💻</span>
+                <h4 class="heading-fourth">Modern Learning Tools</h4>
+              </li>
+              <li class="feature-item">
+                <span>📚</span>
+                <h4 class="heading-fourth">Study Materials</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-teachers" id="section-teachers">
+      <div class="container">
+        <div class="teachers-wrapper section-column">
+          <div class="teachers-content">
+            <h2 class="heading-secondary">Meet our experts</h2>
+            <p class="paragraph">
+              Get to know the passionate educators behind your success! Our team
+              of highly qualified and experienced teachers is committed to
+              guiding you every step of the way. With their expertise and
+              dedication, they create a supportive learning environment tailored
+              to your needs. Meet the mentors who make learning inspiring and
+              achievable!
+            </p>
+            <a href="team.html" class="btn btn__team">All members</a>
+          </div>
+          <figure class="teacher-img__container">
+            <img
+              class="teacher-img"
+              src="images/teachers/teacher-11.png"
+              alt="teacher image"
+            />
+            <div class="teacher-title">
+              <span class="teacher__name">Dr. William Carter </span>
+              <span class="teacher__job">Founder & Director</span>
+            </div>
+          </figure>
+          <figure class="teacher-img__container">
+            <img
+              class="teacher-img"
+              src="images/teachers/teacher-22.png"
+              alt="teacher image"
+            />
+            <div class="teacher-title">
+              <span class="teacher__name">Mr. James Turner</span>
+              <span class="teacher__job">Head of Mathematics Department</span>
+            </div>
+          </figure>
+          <figure class="teacher-img__container">
+            <img
+              class="teacher-img"
+              src="images/teachers/teacher-33.png"
+              alt="teacher image"
+            />
+            <div class="teacher-title">
+              <span class="teacher__name">Mr. Michael Bennett</span>
+              <span class="teacher__job">Science Coordinator</span>
+            </div>
+          </figure>
+          <figure class="teacher-img__container">
+            <img
+              class="teacher-img"
+              src="images/teachers/teacher-44.png"
+              alt="teacher image"
+            />
+            <div class="teacher-title">
+              <span class="teacher__name">Mr. Thomas Harrison</span>
+              <span class="teacher__job">Language Specialist</span>
+            </div>
+          </figure>
+          <figure class="teacher-img__container">
+            <img
+              class="teacher-img"
+              src="images/teachers/teacher-55.png"
+              alt="teacher image"
+            />
+            <div class="teacher-title">
+              <span class="teacher__name">Mr. David Collins</span>
+              <span class="teacher__job">Academic Counselor</span>
+            </div>
+          </figure>
+          <figure class="teacher-img__container">
+            <img
+              class="teacher-img"
+              src="images/teachers/teacher-66.png"
+              alt="teacher image"
+            />
+            <div class="teacher-title">
+              <span class="teacher__name">Mr. Christopher Reynolds</span>
+              <span class="teacher__job"> Technology & Innovation Lead </span>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-location" id="section-location">
+      <div class="container">
+        <div class="location-wrapper">
+          <h2 class="heading-secondary">our branches</h2>
+          <aside class="map-sidebar">
+            <ul class="branches-list"></ul>
+          </aside>
+          <div class="map-wrapper section-column">
+            <div class="check-location">
+              <button class="btn btn__check">Check nearest branch</button>
+            </div>
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="question-section" id="question-section">
+      <span class="sub-heading">
+        Insights Unlocked: Browse & Share Questions
+      </span>
+      <div class="container">
+        <div class="stuednt-questions-wrapper">
+          <span class="shape shape__question">
+            <img src="images/shapes/question.png" alt="shape for decoration" />
+          </span>
+          <aside class="asked-questions">
+            <div class="asked-questions__wrapper section-column">
+              <h2 class="heading-secondary">
+                <span class="text-effect">Q&A</span>
+              </h2>
+              <ul class="questions-list list">
+                <li class="question--row" data-question-num="1">
+                  <h3 class="heading-ternary question__title">
+                    where to deliver the home work
+                  </h3>
+                  <span class="preview">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                    >
+                      <rect width="256" height="256" fill="none" />
+                      <path
+                        d="M132.94,231.39A8,8,0,0,1,128,224V184H72a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8h56V32a8,8,0,0,1,13.66-5.66l96,96a8,8,0,0,1,0,11.32l-96,96A8,8,0,0,1,132.94,231.39ZM48,176V80a8,8,0,0,0-16,0v96a8,8,0,0,0,16,0Z"
+                      />
+                    </svg>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          <!--to help the animation -->
+          <div class="form-wrapper">
+            <div class="user-interaction">
+              <form action="" class="question-form section-column">
+                <div class="form__row margin-bottom-medium">
+                  <label
+                    for="question"
+                    class="form__label form__label--question"
+                    >Your question...?</label
+                  >
+                  <textarea
+                    name="question__field"
+                    type="text"
+                    id="question"
+                    class="form__input question__input"
+                  ></textarea>
+                </div>
+                <div class="form__row controls--row">
+                  <button class="btn form__btn form__btn--clear">Clear</button>
+                  <button class="btn form__btn form__btn--submit btn__active">
+                    submit
+                  </button>
+                </div>
+              </form>
+
+              <div
+                class="selected-question selected-question--initial-position form__hidden"
+              >
+                <h2 class="heading-secondary">
+                  if i have an array and a stack how to get an object form them
+                  and send it to the sun ?
+                </h2>
+                <p class="question-answer">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Nulla
+                </p>
+                <button class="btn btn__new-question btn__active">
+                  Ask new questionn
+                </button>
+              </div>
+            </div>
+
+            <!--______________envelope___________________-->
+            <div class="envelope-wrapper">
+              <div class="envelope envelope__hidden">
+                <img
+                  src="images//back_part.png"
+                  class="envelope-img envelope__back"
+                  alt=""
+                />
+                <img
+                  src="images//front_part.png"
+                  class="envelope-img envelope__front"
+                  alt=""
+                />
+                <div class="lid-container">
+                  <div class="lid__background"></div>
+                  <div class="lid__inner"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-testimonials" id="section-testimonials">
+      <span class="shape shape__comment">
+        <img src="images/shapes/comment.png" alt="shape for decoration" />
+      </span>
+      <div class="container">
+        <div class="testimonials-wrapper flex--column">
+          <h2 class="heading-secondary">
+            Your Success Stories Are Our Greatest Accomplishment
+          </h2>
+          <div class="testimonials-slider">
+            <span class="testimonials-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none" />
+                <path
+                  d="M116,72v88a48.05,48.05,0,0,1-48,48,8,8,0,0,1,0-16,32,32,0,0,0,32-32v-8H40a16,16,0,0,1-16-16V72A16,16,0,0,1,40,56h60A16,16,0,0,1,116,72ZM216,56H156a16,16,0,0,0-16,16v64a16,16,0,0,0,16,16h60v8a32,32,0,0,1-32,32,8,8,0,0,0,0,16,48.05,48.05,0,0,0,48-48V72A16,16,0,0,0,216,56Z"
+                />
+              </svg>
+            </span>
+            <div class="testimonials-faces"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-founder">
+      <span class="shape shape__message">
+        <img src="images/shapes/message.png" alt="shape for decoration" />
+      </span>
+      <div class="container flex--column">
+        <h2 class="heading-secondary">A Message from Our Founder</h2>
+        <q class="founder-message">
+          Dear valued students and supporters, Welcome to our institution, a
+          place where passion meets purpose, and learning transforms lives. From
+          the very beginning, my vision has been to create an environment where
+          everyone feels empowered to dream big, challenge boundaries, and reach
+          their fullest potential. Education is not just about acquiring
+          knowledge; it’s about inspiring change, fostering growth, and building
+          a better tomorrow. Every course, every lesson, and every interaction
+          here is designed with you in mind—your aspirations, your challenges,
+          and your success. Thank you for being a part of this incredible
+          journey. Together, we’re not just shaping futures; we’re shaping a
+          brighter world. With gratitude,
+        </q>
+        <img
+          src="images/teachers/teacher-1.png"
+          class="founder-image"
+          alt="founder image"
+        />
+        <div class="founder-info">
+          <span class="founder">Dr. William Carter</span>
+          <span class="founder-title">Founder & Director</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-logo">
+            <img class="footer-logo-img" src="images/logo.png" alt="logo" />
+            <span class="logo-description sub-heading">
+              At the center, we are dedicated to nurturing minds and fostering
+              growth through education. With a commitment to excellence, we aim
+              to empower every student to achieve their fullest potential and
+              create a brighter future for themselves and their communities
+            </span>
+          </div>
+          <div class="contact-info">
+            <h3 class="heading-ternary">Get in touch</h3>
+            <ul class="contact-list list">
+              <li class="contact-item">
+                <svg
+                  class="contact-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                >
+                  <rect width="256" height="256" fill="none" />
+                  <path
+                    d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.41,134.55a8,8,0,0,0,9.18,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,56a32,32,0,1,1-32,32A32,32,0,0,1,128,72Z"
+                  />
+                </svg>
+
+                <p class="address">
+                  57 Al Ashgar Street, El Shorouk City, Cario, Egypt
+                </p>
+              </li>
+              <li class="contact-item">
+                <svg
+                  class="contact-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                >
+                  <rect width="256" height="256" fill="none" />
+                  <path
+                    d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"
+                  />
+                </svg>
+                <a
+                  class="link contact-link"
+                  href="mailto:supportExample@gmail.com"
+                  >theCenter@gmail.com</a
+                >
+              </li>
+              <li class="contact-item">
+                <svg
+                  class="contact-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                >
+                  <rect width="256" height="256" fill="none" />
+                  <path
+                    d="M144.27,45.93a8,8,0,0,1,9.8-5.66,86.22,86.22,0,0,1,61.66,61.66,8,8,0,0,1-5.66,9.8A8.23,8.23,0,0,1,208,112a8,8,0,0,1-7.73-5.93,70.35,70.35,0,0,0-50.33-50.34A8,8,0,0,1,144.27,45.93Zm-2.33,41.8c13.79,3.68,22.65,12.55,26.33,26.34A8,8,0,0,0,176,120a8.23,8.23,0,0,0,2.07-.27,8,8,0,0,0,5.66-9.8c-5.12-19.16-18.5-32.54-37.66-37.66a8,8,0,1,0-4.13,15.46Zm72.43,78.73-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L126.87,168c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L89.54,41.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,24,88c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,214.37,166.46Z"
+                  />
+                </svg>
+                <a class="link contact-link" href="tel:332-941-57"
+                  >332-941-57</a
+                >
+                <a class="link contact-link" href="tel:267-754-45"
+                  >267-754-45</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="office-time">
+            <h3 class="heading-ternary">office time</h3>
+            <div class="time-row">
+              <span class="days">Mon-Sat:</span>
+              <span class="time">10:00AM - 4.00PM</span>
+            </div>
+            <div class="time-row">
+              <span class="days">Sunday:</span>
+              <span class="time">10:00AM - 3.00PM</span>
+            </div>
+            <div class="time-row">
+              <span class="days">Friday:</span>
+              <span class="time">Close</span>
+            </div>
+          </div>
+        </div>
+        <div class="copy-right-container">
+          <span class="copy-right"
+            >Crafted with passion and precision by Mohamed Ghoniem | &copy; 2024
+            Mohamed Ghoniem. All rights reserved.</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <div class="go-up-container hidden">
+      <a href="#hero-section" class="go-up">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none" />
+          <path
+            d="M231.39,123.06A8,8,0,0,1,224,128H184v80a16,16,0,0,1-16,16H88a16,16,0,0,1-16-16V128H32a8,8,0,0,1-5.66-13.66l96-96a8,8,0,0,1,11.32,0l96,96A8,8,0,0,1,231.39,123.06Z"
+          />
+        </svg>
+      </a>
+    </div>
+  </body>
+</html>
